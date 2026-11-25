@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Clipper GTA - Connexion TikTok</title></head>
+<body style="font-family:sans-serif;max-width:700px;margin:40px auto;line-height:1.6">
+<h1>Connexion TikTok</h1>
+<p id="msg">Retour vers Clipper GTA sur ton ordinateur...</p>
+<p>Si rien ne se passe : vérifie que Clipper GTA est lancé, puis copie l'adresse de cette page et colle-la dans Clipper GTA (page « Connecter TikTok », étape 3 bis).</p>
+<script>
+if (location.search.indexOf("code=") !== -1 || location.search.indexOf("error=") !== -1) {
+  location.replace("http://localhost:5050/tiktok/callback" + location.search);
+} else {
+  document.getElementById("msg").textContent = "Page de retour de la connexion TikTok pour Clipper GTA.";
+}
+</script>
+</body></html>
